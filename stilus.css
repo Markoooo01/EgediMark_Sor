@@ -33,7 +33,7 @@ header{
     background-size: cover;
     padding: 30px 0px 0px 30px;
 }
-#articleGrid{
+article{
     grid-area: ar;
     background-color: black;
     padding: 10px;
@@ -65,7 +65,7 @@ article>div>a>img{
     border-radius: 10px;
     margin: 10px;
 }
-#articleTable{
+section{
     grid-area: ar;
     background-color: black;
     padding: 10px;
@@ -107,4 +107,25 @@ footer{
     text-align: center;
     background-color: rgb(169, 169, 167);
     padding: 10px;
+}
+
+@media all and(max-width: 700px){
+    main{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        'h'
+        'ar'
+        'n'
+        'f';
+    }
+    article{
+        grid-area: ar;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        'h3'
+        'kep'
+        'lista';
+    }
 }
